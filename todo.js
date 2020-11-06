@@ -5,14 +5,12 @@ const toDoForm = document.querySelector(".js-toDoForm"),
 const TODOS_LS = 'toDos';
 
 let delImg = new Image();
-
 delImg.src = "Images/icon/delete.svg";
-
 
 let toDos = [];
 
 function deleteTodo(event) {
-    const btn = event.target;
+    const btn = event.target.parentNode;
     const li = btn.parentNode;
     // 부모 태그의 ID 들고오기 => console.log(event.target.dir);
     // event.target.parentNode => 이벤트 타겟의 부모 li의 아이디 값
@@ -50,6 +48,10 @@ function paintTodo(text, check) {
     const newId = toDos.length + 1;
 
     delBtn.classList.add("btn-del");
+
+    const img = document.createElement("img");
+    img.src = "Images/icon/delete.svg";
+    delBtn.appendChild(img);
     delBtn.addEventListener("click", deleteTodo);
 
     li.classList.add("Todo");
