@@ -4,6 +4,11 @@ const toDoForm = document.querySelector(".js-toDoForm"),
 
 const TODOS_LS = 'toDos';
 
+let delImg = new Image();
+
+delImg.src = "Images/icon/delete.svg";
+
+
 let toDos = [];
 
 function deleteTodo(event) {
