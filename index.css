@@ -1,0 +1,239 @@
+body {
+    color: white;
+    overflow-x: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+.wrap {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.bg {
+    width: 100%;
+}
+
+.cont {
+    margin: 0 auto;
+    padding-top: 120px;
+    width: 960px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nameInput {
+    width: 400px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.38);
+    border-radius: 4px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.nameInput input {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 20px;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+}
+
+.nameInput input:focus {
+    outline: none;
+}
+
+.nameInput input::placeholder {
+    color: white;
+    opacity: 0.6;
+}
+
+.clock {
+    font-size: 64px;
+    text-align: center;
+    font-weight: bold;
+    margin: 4px 0;
+}
+
+.form,
+.greetings {
+    display: none;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.hello {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.TodoForm {
+    height: 44px;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.TodoInput {
+    background-image: url(Images/icon/pen.png);
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position-x: 340px;
+    background-position-y: center;
+    width: 360px;
+    height: 32px;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 16px;
+    padding: 0 0;
+    outline-style: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: white;
+
+    transition: ease-in;
+}
+
+.TodoInput::placeholder {
+    color: white;
+    opacity: 0.87;
+}
+
+.TodoInput:focus::placeholder {
+    opacity: 0.38;
+}
+
+.todoList {
+    display: flex;
+    flex-direction: column;
+}
+
+.Todo {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 400px;
+    height: 44px;
+    box-sizing: border-box;
+    padding: 0 12px;
+    padding-top: 2px;
+    margin-bottom: 4px;
+    color: rgba(0, 0, 0, 0.87);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.16);
+}
+
+.Todo-li {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.btn-check {
+    margin: 0 0;
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    margin-bottom: 4px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: ease-in;
+}
+
+.btn-check:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.unchecked {
+    background-image: url("Images/icon/uncheck.svg");
+}
+
+.checked {
+    background-image: url("Images/icon/check.svg");
+}
+
+input[type="checkbox"]:focus {
+    outline: 0;
+}
+
+.btn-del {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    padding: 0 0;
+    margin-bottom: 2px;
+    background-image: url("images/icon/delete.svg");
+    background-size: 24px;
+    background-color: rgba(0, 0, 0, 0, 0);
+    cursor: pointer;
+    appearance: none;
+    border: none;
+}
+
+.btn-del:focus {
+    outline: 0;
+}
+
+.btn-del:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.showing {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.bgImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -9999;
+    animation: fadeIn .3s ease-in;
+}
+
+.filter {
+    position: absolute;
+    z-index: -999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+}
+
+.cont-weather {
+    width: 100%;
+    text-align: center;
+    opacity: 0.6;
+    margin-top: 24px;
+}
