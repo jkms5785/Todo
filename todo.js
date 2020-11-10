@@ -26,6 +26,14 @@ function deleteTodo(event) {
     saveToDos();
 }
 
+function makeLine(a) {
+    if (a.classList.contains(`checked`)) {
+        a.parentElement.classList.add(`line`);
+    } else {
+        a.parentElement.classList.remove(`line`);
+    }
+}
+
 
 function paintTodo(text, check) {
     const li = document.createElement("li");
@@ -72,6 +80,7 @@ function paintTodo(text, check) {
     toDos.push(toDoObj);
 
     saveToDos();
+    makeLine(checkBtn);
 }
 
 function saveToDos() {
@@ -117,4 +126,5 @@ function CheckTask(e) {
         toDos[id].check = 2;
     }
     saveToDos();
+    makeLine(e.target);
 }

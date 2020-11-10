@@ -1,5 +1,5 @@
 const bg = document.querySelector(".js-bg");
-const IMG_NUMBER = 5;
+const IMG_NUMBER = 8;
 
 // function handleImgLoad(){
 //     console.log("Finish Loading")
